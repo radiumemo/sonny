@@ -33,7 +33,7 @@ jobs:
       - name: Generate unrouted PCBs
         run: npm run gen_pcb
       - name: Save the PCBs
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: pcbs
           path: output/
@@ -57,7 +57,7 @@ jobs:
       - name: Generate images
         run: npm run gen_images
       - name: Retrieve results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Images
           path: images/
@@ -83,7 +83,7 @@ jobs:
       - name: Update permissions
         run: sudo chmod -R a+r output/
       - name: Retrieve results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Kibot_output
           path: |
