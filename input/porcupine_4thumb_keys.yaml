@@ -97,8 +97,8 @@ points:
         inner:
           key:
             spread: 0
-            splay: -5
-            origin: [1 kx, -2.5 ky]
+            splay: 5
+            origin: [1 kx, 2.8 ky]
             column_net: P19
           rows:
             thumb:
@@ -108,8 +108,8 @@ points:
           key:
             column_net: P18
             spread: kx
-            splay: -10
-            origin: [-0.5 kx, -0.8 ky]
+            splay: -8
+            origin: [-0.5 kx, -1 ky]
           rows:
             thumb:
               tags:
@@ -117,9 +117,9 @@ points:
         home:
           key:
             spread: kx
-            splay: -15
+            splay: -10
             rotate: 90
-            origin: [-0.5 kx, -0.7 ky]
+            origin: [-0.5 kx, -0.8 ky]
             column_net: P15
           rows:
             thumb:
@@ -129,9 +129,9 @@ points:
         far:
           key:
             spread: kx
-            splay: -15
+            splay: -7
             rotate: 90
-            origin: [-0.5 kx, -0.9 ky]
+            origin: [-0.5 kx, -0.7 ky]
             column_net: P14
           rows:
             thumb:
@@ -433,15 +433,8 @@ pcbs:
         layer: Edge.Cuts
     # Remove this if you'd rather pay more to not have the order number printed at all
     footprints:
-      jlc_order_number:
-        what: text
-        adjust:
-          ref:
-            - matrix_ring_home
-          shift: [-0.25 kx, 0.5 ky]
-        params:
-          text: "JLCJLCJLCJLC"
-          justify: left
+     
+          
   porcupine_4thumb_keys_bottom_plate:
     outlines:
       edge:
@@ -449,15 +442,8 @@ pcbs:
         layer: Edge.Cuts
     # Remove this if you'd rather pay more to not have the order number printed at all
     footprints:
-      jlc_order_number:
-        what: text
-        adjust:
-          ref:
-            - matrix_ring_home
-          shift: [-0.25 kx, 0.5 ky]
-        params:
-          text: "JLCJLCJLCJLC"
-          justify: left
+    
+          
   porcupine_4thumb_keys:
     outlines:
       edge:
@@ -498,13 +484,13 @@ pcbs:
         what: diode
         where: true
         params:
-          reverse: true
+          
           from: "{{colrow}}"
           to: "{{row_net}}"
         adjust:
           shift: [0, -5]
       mcu:
-        what: promicro_pretty
+        what: promicro
         params:
           orientation: up
         adjust:
@@ -513,15 +499,8 @@ pcbs:
           shift: [21, -11]
           rotate: 270
       # Remove this if you'd rather pay more to not have the order number printed at all
-      jlc_order_number:
-        what: text
-        adjust:
-          ref:
-            - matrix_ring_home
-          shift: [-0.25 kx, 0.5 ky]
-        params:
-          text: "JLCJLCJLCJLC"
-          justify: left
+      
+          
       bat:
         what: bat2p0
         adjust:
